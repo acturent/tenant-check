@@ -1,16 +1,19 @@
 import { app, BrowserWindow } from 'electron';
 
+const title = 'Tenant Check | Acturent';
+
 const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 1080,
     height: 768,
-    title: 'Tenant Check | Acturent',
+    title,
   });
 
   mainWindow.loadURL('https://www.mysmartmove.com/acturent');
 
   // Prevent the window title from changing
   mainWindow.webContents.on('page-title-updated', (event) => {
+    mainWindow.setTitle(title);
     event.preventDefault();
   });
 
