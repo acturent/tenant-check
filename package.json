@@ -1,0 +1,33 @@
+{
+  "name": "tenant-check",
+  "version": "1.0.0",
+  "description": "Tenant screening",
+  "type": "module",
+  "main": "main.mjs",
+  "scripts": {
+    "fmt": "prettier --write",
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acturent/tenant-check.git"
+  },
+  "author": "jim@biacreations.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acturent/tenant-check/issues"
+  },
+  "homepage": "https://github.com/acturent/tenant-check#readme",
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1"
+  },
+  "lint-staged": {
+    "*.{js,css,md,html,mjs,cjs}": "prettier --write"
+  }
+}
